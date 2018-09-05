@@ -16,10 +16,10 @@ Ci hanno spiegato come creare le documentazioni e come lavorare ai progetti, ino
 
 
 ##  Problemi riscontrati e soluzioni adottate
-#--------------------------------------------
+--------------------------------------------
 
 ##  Punto della situazione rispetto alla pianificazione
-#--------------------------------------------
+--------------------------------------------
 
 ## Programma di massima per la prossima giornata di lavoro
 Iniziare con l'analisi del problema
