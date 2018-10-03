@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Progetto1" company="SAMT" webLink="http://" view-date="2018-09-01" view-index="0" gantt-divider-location="667" resource-divider-location="300" version="2.8.9" locale="en_GB">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd10" name="ID" width="54" order="0"/>
+        <field id="tpd3" name="Name" width="252" order="1"/>
+        <field id="tpd4" name="Begin date" width="100" order="2"/>
+        <field id="tpd5" name="End date" width="104" order="3"/>
+        <field id="tpd6" name="Duration" width="73" order="4"/>
+        <field id="tpd9" name="Predecessors" width="81" order="5"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="211" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars base-id="none">
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="1" tue="1" wed="0" thu="1" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="" month="1" date="1" type="HOLIDAY"/>
+        <date year="" month="1" date="2" type="HOLIDAY"/>
+        <date year="" month="8" date="1" type="HOLIDAY"/>
+        <date year="" month="12" date="25" type="HOLIDAY"/>
+        <date year="" month="12" date="26" type="HOLIDAY"/>
+        <date year="2018" month="10" date="29" type="HOLIDAY"/>
+        <date year="2018" month="10" date="30" type="HOLIDAY"/>
+        <date year="2018" month="10" date="31" type="HOLIDAY"/>
+        <date year="2018" month="11" date="2" type="HOLIDAY"/>
+        <date year="2018" month="11" date="1" type="HOLIDAY"/>
+        <date year="2018" month="12" date="24" type="HOLIDAY"/>
+        <date year="2018" month="12" date="25" type="HOLIDAY"/>
+        <date year="2018" month="12" date="26" type="HOLIDAY"/>
+        <date year="2018" month="12" date="27" type="HOLIDAY"/>
+        <date year="2018" month="12" date="28" type="HOLIDAY"/>
+        <date year="2018" month="12" date="31" type="HOLIDAY"/>
+        <date year="2019" month="1" date="1" type="HOLIDAY"/>
+        <date year="2019" month="1" date="2" type="HOLIDAY"/>
+        <date year="2019" month="1" date="3" type="HOLIDAY"/>
+        <date year="2019" month="1" date="4" type="HOLIDAY"/>
+        <date year="2019" month="3" date="3" type="HOLIDAY"/>
+        <date year="2019" month="3" date="5" type="HOLIDAY"/>
+        <date year="2019" month="3" date="4" type="HOLIDAY"/>
+        <date year="2019" month="3" date="6" type="HOLIDAY"/>
+        <date year="2019" month="3" date="7" type="HOLIDAY"/>
+        <date year="2019" month="3" date="8" type="HOLIDAY"/>
+        <date year="2019" month="3" date="19" type="HOLIDAY"/>
+        <date year="2019" month="4" date="19" type="HOLIDAY"/>
+        <date year="2019" month="4" date="22" type="HOLIDAY"/>
+        <date year="2019" month="4" date="23" type="HOLIDAY"/>
+        <date year="2019" month="4" date="24" type="HOLIDAY"/>
+        <date year="2019" month="4" date="25" type="HOLIDAY"/>
+        <date year="2019" month="4" date="26" type="HOLIDAY"/>
+        <date year="2019" month="5" date="30" type="HOLIDAY"/>
+        <date year="2019" month="5" date="1" type="HOLIDAY"/>
+        <date year="2019" month="6" date="10" type="HOLIDAY"/>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+            <taskproperty id="tpc0" name="&lt;sx" type="custom" valuetype="text"/>
+        </taskproperties>
+        <task id="19" name="Introduzione" color="#8cb6ce" meeting="false" start="2018-09-05" duration="2" complete="0" thirdDate="2018-08-22" thirdDate-constraint="0" expand="true">
+            <depend id="21" type="2" difference="0" hardness="Strong"/>
+            <depend id="33" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="21" name="Analisi dei requisiti" color="#8cb6ce" meeting="false" start="2018-09-12" duration="3" complete="0" thirdDate="2018-08-22" thirdDate-constraint="0" expand="true">
+            <depend id="33" type="1" difference="0" hardness="Strong"/>
+        </task>
+        <task id="71" name="Proggettazione" color="#8cb6ce" meeting="false" start="2018-09-12" duration="7" complete="0" thirdDate="2018-09-05" thirdDate-constraint="0" expand="true"/>
+        <task id="127" name="Preparazione Macchina" color="#8cb6ce" meeting="false" start="2018-10-05" duration="1" complete="0" thirdDate="2018-09-05" thirdDate-constraint="0" expand="true">
+            <depend id="26" type="2" difference="0" hardness="Strong"/>
+            <task id="137" name="Installazione Apache" color="#8cb6ce" meeting="false" start="2018-10-05" duration="1" complete="0" thirdDate="2018-10-05" thirdDate-constraint="1" expand="true">
+                <depend id="164" type="2" difference="-1" hardness="Strong"/>
+                <depend id="165" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="164" name="Installazione PHP" color="#8cb6ce" meeting="false" start="2018-10-05" duration="1" complete="0" thirdDate="2018-10-12" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="165" name="Macchina finita e requisiti in chiaro" color="#8cb6ce" meeting="true" start="2018-10-10" duration="0" complete="0" thirdDate="2018-08-31" thirdDate-constraint="0" expand="true"/>
+        <task id="26" name="Programmazione" color="#000000" meeting="false" start="2018-10-10" duration="4" complete="0" thirdDate="2018-08-22" thirdDate-constraint="0" expand="true">
+            <depend id="56" type="2" difference="0" hardness="Strong"/>
+            <task id="27" name="Sito di benvenuto" color="#8cb6ce" meeting="false" start="2018-10-10" duration="1" complete="0" thirdDate="2019-03-22" thirdDate-constraint="0" expand="true">
+                <depend id="28" type="2" difference="-1" hardness="Strong"/>
+            </task>
+            <task id="28" name="Form di registrazione" color="#000000" meeting="false" start="2018-10-12" duration="2" complete="0" thirdDate="2018-08-29" thirdDate-constraint="0" expand="true">
+                <depend id="29" type="2" difference="0" hardness="Strong"/>
+                <task id="32" name="Controllo dei dati" color="#8cb6ce" meeting="false" start="2018-10-12" duration="1" complete="0" thirdDate="2019-03-27" thirdDate-constraint="0" expand="true"/>
+                <task id="30" name="Gestione dei file" color="#8cb6ce" meeting="false" start="2018-10-17" duration="1" complete="0" thirdDate="2018-08-22" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="29" name="Tabella Riassuntiva" color="#8cb6ce" meeting="false" start="2018-10-19" duration="1" complete="0" thirdDate="2018-08-29" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="56" name="Test" color="#8cb6ce" meeting="false" start="2018-10-24" duration="3" complete="0" thirdDate="2018-08-22" thirdDate-constraint="0" expand="true"/>
+        <task id="33" name="Documentazione" color="#8cb6ce" meeting="false" start="2018-09-12" duration="18" complete="0" thirdDate="2018-08-22" thirdDate-constraint="0" expand="true">
+            <depend id="71" type="1" difference="0" hardness="Strong"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
