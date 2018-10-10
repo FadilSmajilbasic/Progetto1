@@ -17,6 +17,7 @@ Inizaito il form di registrazione con la mia grafica
 ####Problemi riscontrati e soluzioni adottate
 
 non sono riuscito a centrare un div nella pagina
+Risolto:
 http://jsfiddle.net/bMf9M/2/
 
 ---

@@ -1,0 +1,15 @@
+.childTable td{
+    padding: 2%;
+}
+input {
+    width: 100%;
+}
+.long {
+    height: 150px;
+}
+.dataInput{
+    font-size: 1em;
+}
+select{
+    font-size: 1em;
+}
