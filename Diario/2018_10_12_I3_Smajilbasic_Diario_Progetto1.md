@@ -18,9 +18,10 @@ https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-ja
 
 Mi serviva un popup message per i campi non validi:
 https://leaverou.github.io/bubbly/
+
 ---
 ####Punto della situazione rispetto alla pianificazione
 
 sono avanti rispetto al gantt preventivo e l'ho riportato al gantt consuntivo
 
-####Programma di massima per la prossima giornata di lavoro
+<!-- ####Programma di massima per la prossima giornata di lavoro -->
