@@ -6,6 +6,12 @@ input {
 }
 .long {
     height: 150px;
+    word-wrap: normal;
+    text-align: start;
+    word-break: normal;
+    overflow-wrap: break-word;
+    overflow-y: visible;
+    overflow-x: scroll;
 }
 .dataInput{
     font-size: 1em;

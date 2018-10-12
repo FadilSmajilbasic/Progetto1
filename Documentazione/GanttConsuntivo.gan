@@ -82,22 +82,25 @@
         </task>
         <task id="71" name="Proggettazione" color="#8cb6ce" meeting="false" start="2018-09-12" duration="7" complete="0" thirdDate="2018-09-05" thirdDate-constraint="0" expand="true"/>
         <task id="127" name="Preparazione Macchina" color="#8cb6ce" meeting="false" start="2018-10-05" duration="1" complete="0" thirdDate="2018-09-05" thirdDate-constraint="0" expand="true">
-            <depend id="26" type="2" difference="0" hardness="Strong"/>
             <task id="137" name="Installazione Apache" color="#8cb6ce" meeting="false" start="2018-10-05" duration="1" complete="0" thirdDate="2018-10-05" thirdDate-constraint="1" expand="true">
                 <depend id="164" type="2" difference="-1" hardness="Strong"/>
-                <depend id="165" type="2" difference="0" hardness="Strong"/>
+                <depend id="165" type="2" difference="-1" hardness="Strong"/>
             </task>
             <task id="164" name="Installazione PHP" color="#8cb6ce" meeting="false" start="2018-10-05" duration="1" complete="0" thirdDate="2018-10-12" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="165" name="Macchina finita e requisiti in chiaro" color="#8cb6ce" meeting="true" start="2018-10-10" duration="0" complete="0" thirdDate="2018-08-31" thirdDate-constraint="0" expand="true"/>
-        <task id="26" name="Programmazione" color="#000000" meeting="false" start="2018-10-10" duration="4" complete="0" thirdDate="2018-08-22" thirdDate-constraint="0" expand="true">
+        <task id="165" name="Macchina finita e requisiti in chiaro" color="#8cb6ce" meeting="true" start="2018-10-05" duration="0" complete="0" thirdDate="2018-08-31" thirdDate-constraint="0" expand="true">
+            <depend id="26" type="2" difference="-1" hardness="Strong"/>
+        </task>
+        <task id="26" name="Implementazione" color="#000000" meeting="false" start="2018-10-05" duration="5" complete="0" thirdDate="2018-08-22" thirdDate-constraint="0" expand="true">
             <depend id="56" type="2" difference="0" hardness="Strong"/>
-            <task id="27" name="Sito di benvenuto" color="#8cb6ce" meeting="false" start="2018-10-10" duration="1" complete="0" thirdDate="2019-03-22" thirdDate-constraint="0" expand="true">
+            <task id="27" name="Sito di benvenuto" color="#8cb6ce" meeting="false" start="2018-10-05" duration="1" complete="0" thirdDate="2019-03-22" thirdDate-constraint="0" expand="true">
                 <depend id="28" type="2" difference="-1" hardness="Strong"/>
             </task>
-            <task id="28" name="Form di registrazione" color="#000000" meeting="false" start="2018-10-12" duration="2" complete="0" thirdDate="2018-08-29" thirdDate-constraint="0" expand="true">
+            <task id="28" name="Form di registrazione" color="#000000" meeting="false" start="2018-10-10" duration="3" complete="0" thirdDate="2018-08-29" thirdDate-constraint="0" expand="true">
                 <depend id="29" type="2" difference="0" hardness="Strong"/>
-                <task id="32" name="Controllo dei dati" color="#8cb6ce" meeting="false" start="2018-10-12" duration="1" complete="0" thirdDate="2019-03-27" thirdDate-constraint="0" expand="true"/>
+                <task id="32" name="Controllo dei dati" color="#8cb6ce" meeting="false" start="2018-10-10" duration="2" complete="0" thirdDate="2019-03-27" thirdDate-constraint="0" expand="true">
+                    <depend id="30" type="2" difference="0" hardness="Strong"/>
+                </task>
                 <task id="30" name="Gestione dei file" color="#8cb6ce" meeting="false" start="2018-10-17" duration="1" complete="0" thirdDate="2018-08-22" thirdDate-constraint="0" expand="true"/>
             </task>
             <task id="29" name="Tabella Riassuntiva" color="#8cb6ce" meeting="false" start="2018-10-19" duration="1" complete="0" thirdDate="2018-08-29" thirdDate-constraint="0" expand="true"/>

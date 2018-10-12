@@ -173,3 +173,9 @@ select:focus {
     font-size: 90%;
     overflow: hidden;
 }
+
+
+/* input::invalid {
+    background-color: red;
+    color: green;
+} */
