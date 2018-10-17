@@ -2,16 +2,18 @@
     padding: 2%;
 }
 input {
-    width: 100%;
+    /* width: 100%; */
 }
 .long {
-    height: 150px;
+    /* height: 150px; */
+    width: 100%;
     word-wrap: normal;
     text-align: start;
     word-break: normal;
     overflow-wrap: break-word;
-    overflow-y: visible;
-    overflow-x: scroll;
+    /* overflow-y: visible;
+    overflow-x: scroll; */
+    resize: none;
 }
 .dataInput{
     font-size: 1em;
@@ -19,3 +21,5 @@ input {
 select{
     font-size: 1em;
 }
+
+

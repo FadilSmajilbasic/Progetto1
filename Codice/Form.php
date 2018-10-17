@@ -24,15 +24,15 @@
                         <table class="childTable">
                             <tr>
                                 <td>
-                                    <div class="dataInput">Nome: </div>
+                                    <div class="dataInput">*Nome: </div>
                                 </td>
-                                <td >
-                                    <input type="text" name="name" >
+                                <td>
+                                    <input type="text" name="name">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="dataInput">Cognome: </div>
+                                    <div class="dataInput">*Cognome: </div>
                                 </td>
                                 <td>
                                     <input type="text" name="surname">
@@ -40,7 +40,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="dataInput">No. Civico: </div>
+                                    <div class="dataInput">*No. Civico: </div>
                                 </td>
                                 <td>
                                     <input type="text" name="streetNumber">
@@ -48,7 +48,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="dataInput">data di nascita: </div>
+                                    <div class="dataInput">*Data di nascita: </div>
 
                                 </td>
                                 <td>
@@ -57,12 +57,12 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="dataInput">Genere: </div>
+                                    <div class="dataInput">*Sesso: </div>
 
                                 </td>
                                 <td>
                                     <select name="gender">
-                                        <option>Scegliere</option>
+                                        <option>Scegliere ...</option>
                                         <option value="M">M</option>
                                         <option value="F">F</option>
                                         <option value="altro">altro</option>
@@ -72,11 +72,11 @@
 
                             <tr>
                                 <td>
-                                    <div class="dataInput">Professione: </div>
+                                    <div class="dataInput">*Professione: </div>
 
                                 </td>
                                 <td>
-                                    <input type="text" class="long" name="job">
+                                    <textarea class="long" name="job"></textarea>
                                 </td>
                             </tr>
                         </table>
@@ -85,7 +85,7 @@
                         <table class="childTable">
                             <tr>
                                 <td>
-                                    <div class="dataInput">Citta: </div>
+                                    <div class="dataInput">*Citta: </div>
                                 </td>
                                 <td>
                                     <input type="text" name="city">
@@ -93,7 +93,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="dataInput">NAP: </div>
+                                    <div class="dataInput">*NAP: </div>
                                 </td>
                                 <td>
                                     <input type="text" name="zip">
@@ -101,10 +101,10 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="dataInput"> Prefisso & <br>No. telefono: </div>
+                                    <div class="dataInput">*Prefisso & <br>*No. telefono: </div>
                                 </td>
                                 <td>
-                                    <select name="countryCode" style="width:250px;">
+                                    <select name="countryCode" style="display: inline-block; width: auto;">
                                         <option data-countryCode="CH" value="41">Switzerland (+41)</option>
                                         <option data-countryCode="IT" value="39">Italy (+39)</option>
                                         <option data-countryCode="GB" value="44" Selected>UK (+44)</option>
@@ -327,12 +327,12 @@
                                             <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
                                         </optgroup>
                                     </select>
-                                    <input type="text" name="phone">
+                                    <input style="display: inline-block" type="text" name="phone">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="dataInput">Email: </div>
+                                    <div class="dataInput">*Email: </div>
 
                                 </td>
                                 <td>
@@ -345,7 +345,7 @@
 
                                 </td>
                                 <td>
-                                    <input type="text" class="long" name="hobby">
+                                    <textarea name="hobby" class="long"></textarea>
                                 </td>
                             </tr>
 

@@ -63,7 +63,7 @@ body {
 
 .parent {
     padding: 20px;
-    width: 60%;
+    width: 90%;
     height:100%;
     display: block;
     border-radius: 5px;
@@ -73,7 +73,6 @@ body {
     margin-right: auto;
 }
 form{
-    display: block;
     margin: 0 auto;
 }
 h1 {
@@ -83,7 +82,7 @@ input,
 textarea {
     line-height: 25px;
     padding: 5px;
-    width: 285px;
+    /* width: 285px; */
     border: 1px solid #E5E5E5;
     outline: 0;
     font: normal 15px/150% Verdana, sans-serif;
@@ -132,8 +131,10 @@ input[type=submit] {
     font-size: 14px;
     font-weight: bold;
     color: #FFFFFF;
+    border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+
     cursor: pointer;
     font-size: 2em;
     display: block;
@@ -143,6 +144,8 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background: rgb(68, 68, 68);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, .4);
+
     -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, .4);
 }
 
@@ -153,7 +156,9 @@ select {
     background: url(../arrow.png) 90% 50% no-repeat;
 
     -webkit-appearance: none;
+    border-radius: 5px;
     -webkit-border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 
     cursor: pointer;
@@ -165,6 +170,7 @@ select {
 
 select:hover,
 select:focus {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
     outline: 0;
     cursor: pointer;
