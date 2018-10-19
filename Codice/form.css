@@ -1,8 +1,7 @@
 .childTable td{
     padding: 2%;
-}
-input {
-    /* width: 100%; */
+    width: 100%;
+    border-collapse: collapse;
 }
 .long {
     /* height: 150px; */
@@ -11,15 +10,21 @@ input {
     text-align: start;
     word-break: normal;
     overflow-wrap: break-word;
-    /* overflow-y: visible;
-    overflow-x: scroll; */
     resize: none;
 }
 .dataInput{
     font-size: 1em;
 }
-select{
-    font-size: 1em;
+.childTable{
+    border-collapse: collapse;
 }
 
+.parentTable{
+    height:100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+bottom{
+    display:flex;
+}

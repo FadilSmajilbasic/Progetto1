@@ -9,7 +9,7 @@ implementato i messaggi d'errore
 
 ####Problemi riscontrati e soluzioni adottate
 
-La centratura del form e le diverse proporzioni per fare il sitor rsponsive
+La centratura del form e le diverse proporzioni per fare il sito rsponsive
 
 ---
 ####Punto della situazione rispetto alla pianificazione
