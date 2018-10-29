@@ -19,6 +19,73 @@
 
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if (checkValues()) {
+            writeData();
+            $formattedFileText = readData();
+            
+            
+            echo "<table class='childTable'>";
+
+            for ($i = 0; $i < count($formattedFileText); $i++) {
+                echo "<tr>";
+                $variable = explode(";", $formattedFileText[$i]);
+                for ($j = 0; $j < count($variable); $j++) {
+                    if (count($variable) == 13)
+                        if ($i == 0)
+                        echo "<td class='columnNames'>" . $variable[$j] . "</td>";
+                    else
+                        echo "<td>" . $variable[$j] . "</td>";
+                }
+                echo "</tr>";
+            }
+
+            // for ($i = 0; $i < count($formattedFileText); $i++) {
+            //     echo "<tr>";
+            //     // $variable = explode(";", $formattedFileText[$i]);
+
+            //     // for ($j = 0; $j < count($variable); $j++) {
+            //     //     if (count($variable) == 13)
+            //     //         if ($i == 0)
+            //     //         echo "<td class='columnNames'>" . $variable[$j] . "</td>";
+            //     //     else
+            //     //         echo "<td>" . $variable[$j] . "</td>";
+            //     // }
+            //     $variable = explode(";", $formattedFileText[$j]);
+            //     for ($j = 0; $j < count($variable); $j++) {
+            //             if (count($variable) == 13)
+            //                 echo "<td class='columnNames'>" . (explode(";", $formattedFileText[0])[$j]) . "</td>";
+            //             else
+            //                 echo "<td>" . $variable[$j] . "</td>";
+            //         }
+            //     echo "</tr>";
+            // }
+
+            echo "</table>";
+
+            echo "</div>";
+        }
+    }
+    function goBack()
+    {
+        echo "<script>alert('Unable to write or read Files');</script>";
+        echo "<script>window.history.back();</script>";
+    }
+
+    function getFormattedData()
+    {
+        $result = "";
+
+        foreach ($GLOBALS['FormData'] as $item) {
+            $result = $result . $item . ";";
+        }
+
+        $result = str_split($result);
+        $result = array_slice($result, 0, (count($result) - 1));
+        $result = implode($result);
+
+        return $result;
+
+    }
+    function writeData(){
             $directory = "";
             $globalFilename = ($directory . "globalUsers.csv");
             $dailyFilename = ($directory . "Registrazioni-") . (date("Y-m-d")) . ".csv";
@@ -47,54 +114,23 @@
 
             fclose($globalHandle);
             fclose($dailyHandle);
-            $globalHandle = fopen($globalFilename, "r");
-            $dailyHandle = fopen($dailyFilename, "r");
 
-            $fileText = fread($dailyHandle, filesize($dailyFilename));
-
-
-            $formattedFileText = explode("\n", $fileText);
-
-            
-            echo "<table class='childTable'>";
-
-            for ($i = 0; $i < count($formattedFileText); $i++) {
-                echo "<tr>";
-                $variable = explode(";", $formattedFileText[$i]);
-                for ($j = 0; $j < count($variable); $j++) {
-                    if (count($variable) == 13)
-                        if ($i == 0)
-                        echo "<td class='columnNames'>" . $variable[$j] . "</td>";
-                    else
-                        echo "<td>" . $variable[$j] . "</td>";
-                }
-                echo "</tr>";
-            }
-            echo "</table>";
-
-            echo "</div>";
-        }
+            clearstatcache(false,$globalFilename);
+            clearstatcache(false,$dailyFilename);
     }
-    function goBack()
-    {
-        echo "<script>alert('Unable to open Files');</script>";
-        echo "<script>window.history.back();</script>";
-    }
+    function readData(){
+        $directory = "";
 
-    function getFormattedData()
-    {
-        $result = "";
+        $dailyFilename = ($directory . "Registrazioni-") . (date("Y-m-d")) . ".csv";
 
-        foreach ($GLOBALS['FormData'] as $item) {
-            $result = $result . $item . ";";
-        }
+        $dailyHandle = (file_exists($dailyFilename)) ? fopen($dailyFilename, "a+") : fopen($dailyFilename, "w+");
 
-        $result = str_split($result);
-        $result = array_slice($result, 0, (count($result) - 1));
-        $result = implode($result);
+        $dailyHandle = fopen($dailyFilename, "r");
+        $fileText = fread($dailyHandle, filesize($dailyFilename));
+        fclose($dailyHandle);
+        $formattedFileText = explode("\n", $fileText);
 
-        return $result;
-
+        return $formattedFileText;
     }
 
 
@@ -127,8 +163,8 @@
             $phone = htmlspecialchars($_POST['phone']);
             $countryCode = htmlspecialchars($_POST['countryCodeHidden']);
             $email = htmlspecialchars($_POST['email']);
-            $hobby = htmlspecialchars($_POST['hobby']);
-            $job = htmlspecialchars($_POST['job']);
+            $hobby = preg_replace("/\n\r\v\f/","",htmlspecialchars($_POST['hobby'])) ;
+            $job = preg_replace("/\n\r\v\f/","",htmlspecialchars($_POST['job']));
 
 
             $regexPhone = "/^\d+$/";
@@ -239,8 +275,8 @@
 
                 $formData['name'] = $name;
                 $formData['surname'] = $surname;
-                $formData['streetNumber'] = $streetNumber;
                 $formData['street'] = $street;
+                $formData['streetNumber'] = $streetNumber;
                 $formData['birthdate'] = $birthdate->format("Y-m-d");
                 $formData['gender'] = $gender;
                 $formData['city'] = $city;
@@ -252,11 +288,9 @@
                 $formData['job'] = $job;
                 $GLOBALS['FormData'] = $formData;
 
-                echo "<script>alert('La validazione dei dati riuscita');</script>";
                 return true;
             } else {
 
-                echo "<script>alert('La validazione dei dati non riuscita');</script>";
                 return false;
             }
 

@@ -16,7 +16,7 @@
     <div class="parent">
         
         <div class="title">
-            <h1>Inserire i dati sotto</h1>
+            <h1>Inserire i dati</h1>
         </div>
         <form action="SaveData.php" method="POST" onsubmit="return checkValues()">
              <table class="parentTable">
@@ -28,7 +28,7 @@
                                     <div class="dataInput">*Nome: </div>
                                  </td>
                                 <td> 
-                                    <input class="normalInput" type="text" name="name">
+                                    <input class="normalInput" type="text" placeholder="Pinco" name="name">
                                  </td>
                             </tr>
                             <tr>
@@ -36,7 +36,7 @@
                                     <div class="dataInput">*Cognome: </div>
                                  </td>
                                 <td> 
-                                    <input class="normalInput" type="text" name="surname">
+                                    <input class="normalInput" type="text" placeholder="Pallino" name="surname">
                                  </td>
                             </tr>
                             <tr>
@@ -44,7 +44,7 @@
                                     <div class="dataInput">*Via: </div>
                                  </td>
                                 <td> 
-                                    <input class="normalInput" type="text" name="street">
+                                    <input class="normalInput" type="text" placeholder="Via San Gottardo" name="street">
                                  </td>
                             </tr>
                             <tr>
@@ -52,7 +52,7 @@
                                     <div class="dataInput">*No. Civico: </div>
                                  </td>
                                 <td> 
-                                    <input class="normalInput" type="text" name="streetNumber">
+                                    <input class="normalInput" type="text" placeholder="12" name="streetNumber">
                                  </td>
                             </tr>
                             <tr>
@@ -75,7 +75,7 @@
 
                                  </td>
                                 <td> 
-                                    <input class="normalInput" type="date" name="birthdate">
+                                    <input class="normalInput" placeholder="Scegliere la data di nascita" type="date" name="birthdate">
                                  </td>
                             </tr>
                             <tr>
@@ -84,7 +84,7 @@
 
                                  </td>
                                 <td> 
-                                    <textarea class="long normalTextarea" name="job"></textarea>
+                                    <textarea class="long normalTextarea" placeholder="Sono un astronauta..." name="job"></textarea>
                                  </td>
                             </tr>
                         </table> 
@@ -96,7 +96,7 @@
                                     <div class="dataInput">*Citta: </div>
                                  </td>
                                 <td> 
-                                    <input class="normalInput" type="text" name="city">
+                                    <input class="normalInput" type="text" name="city" placeholder="Bellinzona">
                                  </td>
                             </tr>
                             <tr>
@@ -104,7 +104,7 @@
                                     <div class="dataInput">*NAP: </div>
                                  </td>
                                 <td> 
-                                    <input class="normalInput" type="text" name="zip">
+                                    <input class="normalInput" type="text" name="zip" placeholder="6830">
                                  </td>
                             </tr>
                             <tr>
@@ -336,7 +336,7 @@
                                         </optgroup>
                                     </select>
                                     <input type="hidden" name="countryCodeHidden" value="41">
-                                    <input class="normalInput" type="text" name="phone">
+                                    <input class="normalInput" type="text" placeholder="0788132926" name="phone">
                                  </td>
                             </tr>
                             
@@ -346,7 +346,7 @@
 
                                  </td>
                                 <td> 
-                                    <input class="normalInput" type="text" name="email">
+                                    <input class="normalInput" type="text" placeholder="pinco.pallino@gmail.com" name="email">
                                  </td>
                             </tr>
                             <tr>
@@ -355,7 +355,7 @@
 
                                  </td>
                                 <td> 
-                                    <textarea class="long normalTextarea" name="hobby" ></textarea>
+                                    <textarea class="long normalTextarea" name="hobby" placeholder="Il mio hobby è..." ></textarea>
                                  </td>
                             </tr>
 
