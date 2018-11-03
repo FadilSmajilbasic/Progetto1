@@ -6,114 +6,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="form.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/notify.js"></script>
+    <script src="js/main.js"></script>
 
 </head>
 
 <body>
     <div class="parent">
-        
+
         <div class="title">
             <h1>Inserire i dati</h1>
         </div>
         <form action="SaveData.php" method="POST" onsubmit="return checkValues()">
-             <table class="parentTable">
+            <table class="parentTable">
                 <tr>
                     <td>
-                         <table class="childTable">
+                        <table class="childTable">
                             <tr>
-                                <td> 
+                                <td>
                                     <div class="dataInput">*Nome: </div>
-                                 </td>
-                                <td> 
+                                </td>
+                                <td>
                                     <input class="normalInput" type="text" placeholder="Pinco" name="name">
-                                 </td>
+                                </td>
                             </tr>
                             <tr>
-                                <td> 
+                                <td>
                                     <div class="dataInput">*Cognome: </div>
-                                 </td>
-                                <td> 
+                                </td>
+                                <td>
                                     <input class="normalInput" type="text" placeholder="Pallino" name="surname">
-                                 </td>
+                                </td>
                             </tr>
                             <tr>
-                                <td> 
+                                <td>
                                     <div class="dataInput">*Via: </div>
-                                 </td>
-                                <td> 
+                                </td>
+                                <td>
                                     <input class="normalInput" type="text" placeholder="Via San Gottardo" name="street">
-                                 </td>
+                                </td>
                             </tr>
                             <tr>
-                                <td> 
+                                <td>
                                     <div class="dataInput">*No. Civico: </div>
-                                 </td>
-                                <td> 
+                                </td>
+                                <td>
                                     <input class="normalInput" type="text" placeholder="12" name="streetNumber">
-                                 </td>
+                                </td>
                             </tr>
                             <tr>
-                                <td> 
+                                <td>
                                     <div class="dataInput">*Sesso: </div>
 
-                                 </td>
-                                <td> 
+                                </td>
+                                <td>
                                     <select name="gender" onchange="updateValue()">
-                                        <option value="M" selected>M</option>
+                                        <option value="default" disabled selected>Selezioni il suo sesso</option>
+                                        <option value="M">M</option>
                                         <option value="F">F</option>
                                         <option value="altro">altro</option>
                                     </select>
-                                    <input type="hidden" name="genderHidden" value="M"/>
-                                 </td>
+                                    <input type="hidden" name="genderHidden" value="M" />
+                                </td>
                             </tr>
                             <tr>
-                                <td> 
+                                <td>
                                     <div class="dataInput">*Data di nascita: </div>
 
-                                 </td>
-                                <td> 
-                                    <input class="normalInput" placeholder="Scegliere la data di nascita" type="date" name="birthdate">
-                                 </td>
+                                </td>
+                                <td>
+                                    <input class="normalInput" placeholder="Scegliere la data di nascita" type="date"
+                                        name="birthdate">
+                                </td>
                             </tr>
                             <tr>
-                                <td> 
+                                <td>
                                     <div class="dataInput">Professione: </div>
 
-                                 </td>
-                                <td> 
+                                </td>
+                                <td>
                                     <textarea class="long normalTextarea" placeholder="Sono un astronauta..." name="job"></textarea>
-                                 </td>
+                                </td>
                             </tr>
-                        </table> 
+                        </table>
                     </td>
                     <td>
-                         <table class="childTable">
+                        <table class="childTable">
                             <tr>
-                                <td> 
+                                <td>
                                     <div class="dataInput">*Citta: </div>
-                                 </td>
-                                <td> 
+                                </td>
+                                <td>
                                     <input class="normalInput" type="text" name="city" placeholder="Bellinzona">
-                                 </td>
+                                </td>
                             </tr>
                             <tr>
-                                <td> 
+                                <td>
                                     <div class="dataInput">*NAP: </div>
-                                 </td>
-                                <td> 
+                                </td>
+                                <td>
                                     <input class="normalInput" type="text" name="zip" placeholder="6830">
-                                 </td>
+                                </td>
                             </tr>
                             <tr>
-                                <td> 
+                                <td>
                                     <div class="dataInput">*Prefisso & <br>*No. telefono: </div>
-                                 </td>
-                                <td> 
+                                </td>
+                                <td>
                                     <select name="countryCode" onchange="updateValue()">
-                                        <option data-countryCode="CH" value="41" selected>Switzerland (+41)</option>
+                                        <option value="" disabled selected>Selezioni il suo prefisso telefonico</option>
+                                        <option data-countryCode="CH" value="41">Switzerland (+41)</option>
                                         <option data-countryCode="IT" value="39">Italy (+39)</option>
                                         <option data-countryCode="GB" value="44">UK (+44)</option>
                                         <option data-countryCode="US" value="1">USA (+1)</option>
@@ -122,7 +127,8 @@
                                             <option data-countryCode="AD" value="376">Andorra (+376)</option>
                                             <option data-countryCode="AO" value="244">Angola (+244)</option>
                                             <option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
-                                            <option data-countryCode="AG" value="1268">Antigua &amp; Barbuda (+1268)</option>
+                                            <option data-countryCode="AG" value="1268">Antigua &amp; Barbuda
+                                                (+1268)</option>
                                             <option data-countryCode="AR" value="54">Argentina (+54)</option>
                                             <option data-countryCode="AM" value="374">Armenia (+374)</option>
                                             <option data-countryCode="AW" value="297">Aruba (+297)</option>
@@ -152,7 +158,8 @@
                                             <option data-countryCode="CA" value="1">Canada (+1)</option>
                                             <option data-countryCode="CV" value="238">Cape Verde Islands (+238)</option>
                                             <option data-countryCode="KY" value="1345">Cayman Islands (+1345)</option>
-                                            <option data-countryCode="CF" value="236">Central African Republic (+236)</option>
+                                            <option data-countryCode="CF" value="236">Central African Republic
+                                                (+236)</option>
                                             <option data-countryCode="CL" value="56">Chile (+56)</option>
                                             <option data-countryCode="CN" value="86">China (+86)</option>
                                             <option data-countryCode="CO" value="57">Colombia (+57)</option>
@@ -209,7 +216,7 @@
                                             <option data-countryCode="IQ" value="964">Iraq (+964)</option>
                                             <option data-countryCode="IE" value="353">Ireland (+353)</option>
                                             <option data-countryCode="IL" value="972">Israel (+972)</option>
-                                             <!-- <option data-countryCode="IT" value="39">Italy (+39)</option> -->
+                                            <!-- <option data-countryCode="IT" value="39">Italy (+39)</option> -->
                                             <option data-countryCode="JM" value="1876">Jamaica (+1876)</option>
                                             <option data-countryCode="JP" value="81">Japan (+81)</option>
                                             <option data-countryCode="JO" value="962">Jordan (+962)</option>
@@ -279,7 +286,8 @@
                                             <option data-countryCode="RU" value="7">Russia (+7)</option>
                                             <option data-countryCode="RW" value="250">Rwanda (+250)</option>
                                             <option data-countryCode="SM" value="378">San Marino (+378)</option>
-                                            <option data-countryCode="ST" value="239">Sao Tome &amp; Principe (+239)</option>
+                                            <option data-countryCode="ST" value="239">Sao Tome &amp; Principe
+                                                (+239)</option>
                                             <option data-countryCode="SA" value="966">Saudi Arabia (+966)</option>
                                             <option data-countryCode="SN" value="221">Senegal (+221)</option>
                                             <option data-countryCode="CS" value="381">Serbia (+381)</option>
@@ -307,7 +315,8 @@
                                             <option data-countryCode="TH" value="66">Thailand (+66)</option>
                                             <option data-countryCode="TG" value="228">Togo (+228)</option>
                                             <option data-countryCode="TO" value="676">Tonga (+676)</option>
-                                            <option data-countryCode="TT" value="1868">Trinidad &amp; Tobago (+1868)</option>
+                                            <option data-countryCode="TT" value="1868">Trinidad &amp; Tobago
+                                                (+1868)</option>
                                             <option data-countryCode="TN" value="216">Tunisia (+216)</option>
                                             <option data-countryCode="TR" value="90">Turkey (+90)</option>
                                             <option data-countryCode="TM" value="7">Turkmenistan (+7)</option>
@@ -316,11 +325,11 @@
                                                 (+1649)</option>
                                             <option data-countryCode="TV" value="688">Tuvalu (+688)</option>
                                             <option data-countryCode="UG" value="256">Uganda (+256)</option>
-                                             <!-- <option data-countryCode="GB" value="44">UK (+44)</option>  -->
+                                            <!-- <option data-countryCode="GB" value="44">UK (+44)</option>  -->
                                             <option data-countryCode="UA" value="380">Ukraine (+380)</option>
                                             <option data-countryCode="AE" value="971">United Arab Emirates (+971)</option>
                                             <option data-countryCode="UY" value="598">Uruguay (+598)</option>
-                                             <!-- <option data-countryCode="US" value="1">USA (+1)</option>  -->
+                                            <!-- <option data-countryCode="US" value="1">USA (+1)</option>  -->
                                             <option data-countryCode="UZ" value="7">Uzbekistan (+7)</option>
                                             <option data-countryCode="VU" value="678">Vanuatu (+678)</option>
                                             <option data-countryCode="VA" value="379">Vatican City (+379)</option>
@@ -337,35 +346,37 @@
                                     </select>
                                     <input type="hidden" name="countryCodeHidden" value="41">
                                     <input class="normalInput" type="text" placeholder="0788132926" name="phone">
-                                 </td>
+                                </td>
                             </tr>
-                            
+
                             <tr>
-                                <td> 
+                                <td>
                                     <div class="dataInput">*Email: </div>
 
-                                 </td>
-                                <td> 
+                                </td>
+                                <td>
                                     <input class="normalInput" type="text" placeholder="pinco.pallino@gmail.com" name="email">
-                                 </td>
+                                </td>
                             </tr>
                             <tr>
-                                <td> 
+                                <td>
                                     <div class="dataInput">Hobby: </div>
 
-                                 </td>
-                                <td> 
-                                    <textarea class="long normalTextarea" name="hobby" placeholder="Il mio hobby è..." ></textarea>
-                                 </td>
+                                </td>
+                                <td>
+                                    <textarea class="long normalTextarea" name="hobby" placeholder="Il mio hobby è..."></textarea>
+                                </td>
                             </tr>
 
-                        </table> 
+                        </table>
                     </td>
                 </tr>
             </table>
             <bottom>
+                <input type="button" class="azzeraButton" value="Azzera" onclick="clearInputs()">
                 <input type="button" class="nextPage" value="Prosegui" onclick="next(true);">
-            </bottom> 
+
+            </bottom>
 
         </form>
     </div>

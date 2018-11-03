@@ -1,0 +1,30 @@
+
+.parent {
+    overflow-x: auto;
+}
+
+table {
+    border-radius: 5px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+th,
+td {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 8px;
+    font-size: 1em;
+}
+
+tr:nth-child(even) {
+    background-color: #aaaaaa;
+    font-family: 'Arial', sans-serif;
+}
+
+th {
+    font-size: 1.5em;
+    background-color: #808080;
+    color: white;
+}

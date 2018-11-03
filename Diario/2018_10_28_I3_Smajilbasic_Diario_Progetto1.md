@@ -1,6 +1,6 @@
-# PROGETTO | Diario di lavoro - 29.10.2018
+# PROGETTO | Diario di lavoro - 28.10.2018
 ##### Fadil Smajilbasic
-### Canobbio, [29.10.2018]
+### Canobbio, [28.10.2018]
 
 ## Lavori svolti
 aggiunto testi di placehodler
