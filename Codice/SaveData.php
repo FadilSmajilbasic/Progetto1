@@ -34,6 +34,7 @@
 			$GLOBALS['globalFilename'] = $globalFilename;
 			$GLOBALS['dailyFilename'] = $dailyFilename;
 
+			
 			writeData();
 			$formattedFileText = readData();
 
@@ -43,7 +44,7 @@
 			for ($i = 0; $i < count($formattedFileText); $i++) {
 				echo "<tr>";
 				$variable = explode(";", $formattedFileText[$i]);
-				if (count($variable) == 13) {
+				if (count($variable) == 14) {
 					for ($j = 0; $j < count($variable); $j++) {
 						if ($i == 0)
 							echo "<th>" . $variable[$j] . "</th>";
@@ -68,8 +69,11 @@
 		$result = "";
 
 		foreach ($GLOBALS['FormData'] as $item) {
+			$item = preg_replace("/;/",",",$item);
 			$result = $result . $item . ";";
 		}
+		
+		// $result = $result . $dateTime;
 
 		$result = str_split($result);
 		$result = array_slice($result, 0, (count($result) - 1));
@@ -232,23 +236,25 @@
 			}
 
 			if ($next) {
+				$dateTime = (new DateTime())->format("Y-m-d H:i:s");
 
-				$formData['name'] = $name;
-				$formData['surname'] = $surname;
-				$formData['street'] = $street;
-				$formData['streetNumber'] = $streetNumber;
-				$formData['birthdate'] = $birthdate->format("Y-m-d");
-				$formData['gender'] = $gender;
-				$formData['city'] = $city;
-				$formData['zip'] = $zip;
-				$formData['phone'] = $phone;
-				$formData['countryCode'] = $countryCode;
-				$formData['email'] = $email;
-				$formData['hobby'] = $hobby;
-				$formData['job'] = $job;
+				$formData['Nome'] = $name;
+				$formData['Cognome'] = $surname;
+				$formData['Via'] = $street;
+				$formData['No. Civico'] = $streetNumber;
+				$formData['Data di nascita'] = $birthdate->format("Y-m-d");
+				$formData['sesso'] = $gender;
+				$formData['citta'] = $city;
+				$formData['NAP'] = $zip;
+				$formData['No. Telefono'] = $phone;
+				$formData['Prefisso'] = $countryCode;
+				$formData['Email'] = $email;
+				$formData['Hobby'] = $hobby;
+				$formData['Professione'] = $job;
+				$formData['Data'] = $dateTime;
 				$GLOBALS['FormData'] = $formData;
 
-				echo "<script>$.notify('La validazione dei dati riuscita', 'sucess');</script>";
+				echo "<script>$.notify('La validazione dei dati riuscita', 'success');</script>";
 				return true;
 			} else {
 				echo "<script>$.notify('La validazione dei dati non riuscita', 'error');</script>";

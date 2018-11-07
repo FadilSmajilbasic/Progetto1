@@ -16,9 +16,6 @@ regex per validare le email:
 https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
 
 
-Mi serviva un popup message per i campi non validi:
-https://leaverou.github.io/bubbly/
-
 ---
 ####Punto della situazione rispetto alla pianificazione
 
