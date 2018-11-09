@@ -9,6 +9,7 @@ Iniziato la presentazione
 ####Problemi riscontrati e soluzioni adottate
 Negli input era permesso inserire il ";" che davano problemi nei file csv che si riferivano allo stesso carattere per le separazioni delle colonne.
 Soluzione: sostituito il carattere ";" con il carattere "," in tutti gli input
+
 ---
 <!-- ####Punto della situazione rispetto alla pianificazione -->
 
