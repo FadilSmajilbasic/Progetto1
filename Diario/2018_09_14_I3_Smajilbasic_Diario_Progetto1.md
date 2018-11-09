@@ -19,9 +19,7 @@ le prossime rige:
 <code>[http]
     proxy = http://nome.cognome:password@10.20.0.1:8080
 [https]
-	proxy = http://nome.cognome:password@10.20.0.1:8080
-
-</code>
+	proxy = http://nome.cognome:password@10.20.0.1:8080</code>
 
 ###  Punto della situazione rispetto alla pianificazione
 Troppo avanti

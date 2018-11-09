@@ -1,6 +1,6 @@
-# PROGETTO | Diario di lavoro - 19.09.2018
+# PROGETTO | Diario di lavoro - 21.09.2018
 ##### Fadil Smajilbasic
-### Canobbio, [19.09.2018]
+### Canobbio, [21.09.2018]
 
 ## Lavori svolti
 
@@ -14,11 +14,11 @@ Scritto il Software che verra utilizzato
 Creato mockup interfaccia grafica per la pagina 1 e 2
 
 
-###  Problemi riscontrati e soluzioni adottate
+<!-- ###  Problemi riscontrati e soluzioni adottate -->
+<!-- --- -->
+<!-- ###  Punto della situazione rispetto alla pianificazione -->
+<!-- --- -->
+<!-- ### Programma di massima per la prossima giornata di lavoro -->
 ---
-###  Punto della situazione rispetto alla pianificazione
----
-### Programma di massima per la prossima giornata di lavoro
----
-###Compiti
----
+<!-- ###Compiti -->
+<!-- --- -->

@@ -5,7 +5,7 @@
 ## Lavori svolti
 Finito la Presentazione
 Finito il Progetto 1
-####Problemi riscontrati e soluzioni adottate
+<!-- ####Problemi riscontrati e soluzioni adottate -->
 ---
 <!-- ####Punto della situazione rispetto alla pianificazione -->
 
